@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 선택자</title>
+        <style>
+            /* ID 속성이 지정된 태그에 사용
+                : ID 속성값은 문서 내부에서 유일해야 합니다.
+                
+                #ID속성값 {
+                 속성이름 : 속성값;
+                } 
+            */
+            #title{
+                font-size: 3rem;
+            }
+            #contents{
+                font-size: 1.4rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">소연재</h1>
+        <h1>소연재</h1>
+        <hr>
+        <p id="contents">저는 체조 선수 소연재입니다.</p>
+        <p>음악을 들으면서 책 읽기를 좋아합니다.<br>김치찌개와 막국수 무척 좋아합니다.</p>
+        <span>span영역입니다.</span>
+        <div>div영역입니다.</div>
+        <table border="1">
+            <tr>
+                <td>이것은 테이블입니다.</td>
+            </tr>
+        </table>
+    </body>
+</html> 

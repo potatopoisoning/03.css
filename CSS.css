@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* .CSS파일의 인코딩을 명시해줘야 합니다. */
+
+/* CSS 문법에 맞게 작성합니다. */
+
+body{
+    background-color: darkgray;
+}
+h1{
+    color: aquamarine;
+}
+p{
+    background-color: white;
+    font-size: 1.4rem;
+}
+p{
+    background-color: bisque;
+    font-size: 0.8rem;
+}
