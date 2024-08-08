@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 속성 선택자</title>
+        <style>
+            /* 속성 선택자
+                선택자[속성이름=속성값] {} */
+            input[type="text"]{
+                color: blue;
+            }
+            /* name속성값이 name인 객체를 찾아서 글자크기를 변경해보세요. */
+            input[name="name"]{
+                font-size: 24px;
+            }
+            /* value속성값이 30인 객체를 찾아서 글자 굵기를 변경해보세요. */
+            input[value="30"]{
+                font-weight: 1000;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <input type="text" name="name" value="홍길동">
+        <input type="number" name="age" value="30">
+        <input type="text" name="addr" value="전주시">
+
+    </body>
+</html>

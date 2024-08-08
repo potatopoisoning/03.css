@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>절대 좌표 배치</title>
+        <style>
+            div {
+            position: absolute;
+            display: inline-block;
+            }
+            div > p {
+                width: 20px;
+                height: 20px;
+                background-color: yellow;
+                color: red;
+                /* 부모 객체의 좌표계 relativd, absolute, fixed, stiky 등으로
+                설정되어있을때에 자식 객체에 absolute 속성을 부여할 수 있습니다.
+                부모 객체가 없을 경우 => boby의 좌표를 이용해 절대 좌표가 결정됩니다. */
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Merry Christmas!!!</h3>
+        <hr>
+        <p>예수님이 탄생하셨습니다.</p>
+        <br><br>
+        <div>
+            <img src="christmastree.png" alt="크리스마스 트리 이미지" style="width: 200px; height: 200px;">
+            <p style="left: 50px; top: 30px;">M</p>
+            <p style="left: 100px; top: 0px;">E</p>
+            <p style="left: 100px; top: 80px;">R</p>
+            <p style="left: 150px; top: 110px;">R</p>
+            <p style="left: 30px; top: 130px;">Y</p>
+        </div>
+    </body>
+</html>

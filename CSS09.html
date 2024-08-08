@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS 선택자 예제</title>
+        <style>
+            *{
+                margin: 10px;
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            span{
+                display: inline-block;
+            }
+
+            .parent{
+                background: lightpink;
+                /* 테두리 굵기, 종류, 색상 */
+                border: 3px solid hotpink;
+            }
+             
+            .child{
+                background-color: lightgoldenrodyellow;
+                border: 3px dashed yellow;
+            }
+
+            .grandchild{
+                background-color: white;
+                border: 3px dotted linen;
+            }
+
+            /* 부모 div의 직계 자식중 class가 child인 객체를 모두 선택 */
+            /* .parent > .child{
+                background-color: yellowgreen;
+            } */
+
+            /* 부모 div의 직계 자식중 div객체 선택하기 */
+            .parent > div{
+                background-color: yellowgreen;
+            }
+
+            /* 부모 div의 직계 자식중 span객체 선택하기 */
+            .parent > span{
+                background-color: aquamarine;
+            }
+
+            /* 부모 div의 직계 자식중 p객체 선택하기 */
+            .parent > p{
+                background-color: cyan;
+            }
+
+            /* 부모 div의 모든 자손들 중 class grandchild 선택하기 */
+            /* .parent .grandchild{
+                background-color: burlywood;
+            } */
+
+            /* 부모 div의 모든 자손들 중 div객체 선택하기 */
+            .parent div{
+            background-color: honeydew;
+            color: pink;
+            }
+
+            /* 부모 div의 모든 자손들 중 span객체 선택하기 */
+            .parent span{
+                background-color: lightsalmon;
+                border-color: orangered;
+            }
+            /* 객체의 계층 구조로 찾기 */
+            /* parent의 자식들 중 span객체의 자식인 span객체 선택하기 */
+            .parent span span{
+                color: white;
+                background-color: darkgray;
+                font-size: 24px;
+            }
+            .parent p span{
+                color: darkgray;
+                background-color: white;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>부모 DIV</h2>
+        <div class="parent">
+            직계 자식 div<br>
+            <div class="child">
+                <div class="grandchild">자식 div의 div 자식 1</div>
+                <div class="grandchild">자식 div의 div 자식 2</div>
+                <div class="grandchild">자식 div의 div 자식 3</div>
+                <span class="grandchild">자식 div의 span 자식</span>
+                <p class="grandchild">자식 div의 p 자식</p>
+            </div>
+            직계 자식 span<br>
+            <span class="child">
+                <span class="grandchild">자식 span의 span 자식 1</span>
+                <span class="grandchild">자식 span의 span 자식 2</span>
+                <span class="grandchild">자식 span의 span 자식 3</span>
+                <div class="grandchild">자식 span의 div 자식</div>
+                <p class="grandchild">자식 span의 p 자식</p>
+            </span><br>
+            직계 자식 p<br>
+            <p class="child">
+                <span class="grandchild">자식 p의 span 자식 1</span>
+                <span class="grandchild">자식 p의 span 자식 2</span>
+                <span class="grandchild">자식 p의 span 자식 3</span>
+                <!-- p태그 내부에 div와 p는 올 수 없습니다. -->
+                <!-- <div class="grandchild">자식 p의 div 자식</div>
+                <p class="grandchild">자식 p의 p 자식</p> -->
+            </p>
+        </div>
+    </body>
+</html>
