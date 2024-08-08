@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="kr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>선택자 조합</title>
-        <style>
-            /* span 태그 중에 class가 myRed인 객체 */
-            span.myRed{
-                color: red;
-                background-color: bisque;
-            }
-            p.myRed{
-                color: white;
-                background-color: red;
-            }
-            span.myBlue{
-                color: blue;
-                background-color: skyblue;
-            }
-            p.myBlue{
-                color: white;
-                background-color: blue;
-            }
-            /* 자식 선택자
-                부모선택자 > 자식선택자{ 속성:값; } */
-            p > span{
-                background-color: lavenderblush;
-            }
-            p > .myBlue{
-                font-size: 24px;
-                color: blue;
-            }
-            /* 자손 선택자 */
-            p span{
-                font-size: 24px;
-                color: yellowgreen;
-            }
-        </style>
-    </head>
-    <body style="background-color: lavender;">
-        <h1>소연재</h1>
-        <hr>
-        <p>저는 체조 선수 소연재입니다.</p>
-        <p>음악을 들으면서 책 읽기를 좋아합니다.<br>김치찌개와 막국수 무척 좋아합니다.</p>
-        <span>span영역입니다.</span>
-        <div>div영역입니다.</div>
-        <p class="myRed">p myRed</p>
-        <p class="myBlue">p myBlue</p>
-        <span class="myRed">span myRed</span>
-        <span class="myBlue">span myBlue</span>
+   <head>
+      <meta charset="UTF-8">
+      <title>CSS 선택자 조합</title>
+      <style>
+         /* span태그 중에 class가 myRed인 객체 */
+         span.myRed {
+            color: red;
+            background-color: bisque;
+         }
+         p.myRed {
+            color: white;
+            background-color: red;
+         }
+         /* 자식 선택자
+            부모선택자 > 자식선택자 { 속성:값; } */
 
-        <p>
-            <span>p태그 내부의 span</span>
-            <div>p태그 내부의 div</div>
-        </p>
-        <p>
-            <span class="myRed">p태그 내부의 span</span>
-            <div class="myBlue">p태그 내부의 div</div>
-        </p>
-        <p>
-            <span>p &gt; div &gt; span</span>
-            <div>p &gt; div &gt; p</div>
-        </p>
-    </body>
-</html> 
+         /* 부모태그 > 자식태그 */
+         p > span {
+            background-color: yellow;
+         }
+
+         /* 부모태그 > 자식클래스 */
+         p > .myBlue {
+            font-size: 24px;
+            color: blue;
+         }
+         /* 자손 선택자 */
+         p span {
+            font-size: 20px;
+            color: yellowgreen;
+         }
+      </style>
+   </head>
+   <body style="background-color: darkgray;">
+      <h1>소연재</h1>
+      <hr>
+      <p>저는 체조 선수 소연재입니다</p>
+      <p>음악을 들으면서 책 읽기를 좋아합니다<br>김치찌개와 막국수 무척 좋아합니다</p>
+      <span>span영역입니다</span>
+      <div>div영역입니다</div>
+      <p class="myRed">p myRed</p>
+      <p class="myBlue">p myBlue</p>
+      <span class="myRed">span myRed</span>
+      <span class="myBlue">span myBlue</span>
+
+      <p>
+         <span>P태그 내부의 span</span>
+         <span>p태그 내부의 span</span>
+      </p>
+      <p>
+         <span class="myRed">P태그 내부의 span</span>
+         <span class="myBlue">p태그 내부의 div</span>
+      </p>
+      <p>
+         <span>
+            <span>p &gt; span &gt; span </span>
+            <p>p &gt; span &gt; p </p>
+         </span>
+      </p>
+   </body>
+</html>
