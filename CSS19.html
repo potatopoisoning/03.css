@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>z index</title>
+        <style>
+            img{
+                width: 200px;
+                height: 280px;
+                position: absolute;
+            }
+            /* 
+                브라우저의 윈도우창을 평면이라고 가정할때에 
+                가로축 => x축
+                세로축 => y축
+                가상의 높이축 => z축
+            */
+            .third{
+                top: 200px;
+                left: 100px;
+            }
+            .second{
+                top: 100px;
+                left: 50px;
+            }
+            .first{
+                /* z-index를 작성하지 않으면 차례대로 순번이 매겨집니다. */
+                /* z-index를 명시하면, 명시된 번호로 적용됩니다 */
+                /* z-index의 값은 클수록 z축 위에 표시됩니다. */
+                z-index: 10;
+            }
+            img:hover{
+                 width: 210px;
+                 z-index: 99;
+            }
+        </style>
+    </head>
+    <body>
+        <img class="first" src="./고1.jpg" alt="고양1">
+        <img class="second" src="./고2.jpeg" alt="고양2">
+        <img class="third" src="./고3.jpeg" alt="고양3">
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>고정배치</title>
+        <style>
+            .myBox{
+                /* 너비 높이 */
+                width: 150px;
+                height: 70px;
+
+                /* 배경색 */
+                background-color: lavender;
+                
+                /* 폰트 색상 굵기 */
+                color: blueviolet;
+                font-weight: bold;
+
+                /* 테두리 */
+                border: 3px solid;
+                border-radius: 10px;
+
+                /* 가운데 정렬 */
+                /* text-align: center; */
+
+                /* 수직으로 가운데 정렬 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                /* 글자에 그림자 넣기 */
+                /* x축으로 어느만큼 띄울지, y축으로, 흐리게할 범위, 색상 */
+                text-shadow: 2px 2px 2px plum;
+
+                /* 위치를 고정시키기 */
+                position: fixed;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Merry Christmas!!!</h3>
+      <hr>
+      <p>예수님이 탄생하셨습니다</p>
+      <br><br>
+      <div>
+         <img src="./christmastree.png" alt="크리스마스 트리 이미지"
+              style="width: 200px;height: 200px;">
+      </div>
+      <p>박스1 위</p>
+      <div class="myBox" style="top: 10px; right: 10px;">화면에 고정시킬<br>알림 박스입니다</div>
+      <p>박스1 아래</p>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <p>박스2 위</p>
+      <div class="myBox" style="bottom: 30px; left: 10px;">화면에 고정시킬<br>알림 박스입니다</div>
+      <p>박스2 아래</p>
+      <br><br><br><br><br>
+      <p>문서의 끝</p>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Overflow</title>
+        <style>
+            p{
+                width: 10rem;
+                height: 5rem;
+                background-color: skyblue;
+                border: 3px solid blue;
+            }
+            .hidden{
+                overflow: hidden;
+            }
+            .visible{
+                overflow: visible;
+            }
+            .scroll{
+                overflow: scroll;
+            }
+            .auto{
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="hidden">
+            단락 태그 내부의 문자열 입니다.<br>
+            내부 내용이, p태그 요소의 표시 크기를 넘어갈때에,
+            어떻게 처리할것인지에 대한 속성이 Overflow입니다.
+            그래서 내용을 충분히 길게 작성하고 있습니다.        
+        </p>
+        단락 태그 외부의 문자열입니다.
+        <p class="visible">
+            단락 태그 내부의 문자열 입니다.<br>
+            내부 내용이, p태그 요소의 표시 크기를 넘어갈때에,
+            어떻게 처리할것인지에 대한 속성이 Overflow입니다.
+            그래서 내용을 충분히 길게 작성하고 있습니다.
+        </p>
+        단락 태그 외부의 문자열입니다.<br><br><br><br><br><br>
+        <p class="scroll">
+            단락 태그 내부의 문자열 입니다.<br>
+            내부 내용이, p태그 요소의 표시 크기를 넘어갈때에,
+            어떻게 처리할것인지에 대한 속성이 Overflow입니다.
+            그래서 내용을 충분히 길게 작성하고 있습니다.
+        </p>
+        단락 태그 외부의 문자열입니다.
+        <p class="scroll">
+            단락 태그 내부의 문자열 입니다.<br>
+        </p>
+        단락 태그 외부의 문자열입니다.
+        <p class="auto">
+            단락 태그 내부의 문자열 입니다.<br>
+            내부 내용이, p태그 요소의 표시 크기를 넘어갈때에,
+            어떻게 처리할것인지에 대한 속성이 Overflow입니다.
+            그래서 내용을 충분히 길게 작성하고 있습니다.
+        </p>
+        단락 태그 외부의 문자열입니다.
+        <p class="auto">
+            단락 태그 내부의 문자열 입니다.<br>
+        </p>
+        단락 태그 외부의 문자열입니다.
+    </body>
+</html>
